@@ -1,0 +1,5 @@
+secrets.yaml
+.esphome/
+
+# ESPHome Device Builder (lokale Einstellungen, Peer-Link-Schlüssel)
+.device-builder*

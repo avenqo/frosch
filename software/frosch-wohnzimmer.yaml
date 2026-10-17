@@ -1,0 +1,59 @@
+# Frosch – Indoor: Wohnzimmer
+# ESP8266 NodeMCU V0.9 · BMP280 + ADS1115 (beide I2C) · Fotowiderstand und MQ-2 am ADS1115
+# Verdrahtung: ../hardware/verdrahtung.md, Abschnitt "Wohnzimmer"
+
+substitutions:
+  name: frosch-wohnzimmer
+  friendly_name: Frosch Wohnzimmer
+  ort: wohnzimmer
+
+packages:
+  common: !include common.yaml
+
+esp8266:
+  board: nodemcu              # NodeMCU V0.9 (ESP-12)
+
+i2c:
+  sda: GPIO4                  # D2
+  scl: GPIO5                  # D1
+  frequency: 100kHz
+  scan: true
+
+ads1115:
+  address: 0x48               # ADDR → GND
+
+sensor:
+  - platform: bmp280_i2c
+    address: 0x76
+    update_interval: 60s
+    temperature:
+      name: Temperatur
+      oversampling: 2x
+    pressure:
+      name: Luftdruck
+
+  # Helligkeit: 3V3 → LDR → A0 (ADS1115) → 27 kΩ → GND
+  # Spannung 0–3,3 V, heller = größer (keine Umrechnung in Lux)
+  - platform: ads1115
+    name: Helligkeit
+    multiplexer: A0_GND
+    gain: 4.096
+    update_interval: 10s
+    filters:
+      - sliding_window_moving_average:
+          window_size: 4
+          send_every: 1
+          send_first_at: 1
+
+  # MQ-2: AO (0–5 V) → 10 kΩ → A1 (ADS1115) → 20 kΩ → GND
+  # Der Faktor 1,5 rechnet auf die Spannung am Modulausgang zurück.
+  # Nur relativer Wert, keine ppm (MQ-2 ist unkalibriert).
+  - platform: ads1115
+    name: Gas MQ-2
+    multiplexer: A1_GND
+    gain: 4.096
+    update_interval: 10s
+    filters:
+      - multiply: 1.5
+logger:
+  level: WARN

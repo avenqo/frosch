@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "filename": "frosch-nord.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "47fb7c86-ee03-50dd-b88c-a1c4eea1d92e",
+      ""
+    ]
+  ],
+  "boards": [],
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  }
+}

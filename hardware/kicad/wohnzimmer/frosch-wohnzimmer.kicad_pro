@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "filename": "frosch-wohnzimmer.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "2c7c7fa5-6ec1-5216-a0cf-f22a54ff504c",
+      ""
+    ]
+  ],
+  "boards": [],
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  }
+}

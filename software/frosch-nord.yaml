@@ -1,0 +1,83 @@
+# Frosch – Outdoor: Norden
+# ESP8266 NodeMCU V2 · BME280 · Fotowiderstand · SPS30 · Regensensor · PIR HC-SR501
+# Verdrahtung: ../hardware/verdrahtung.md, Abschnitt "Norden"
+
+substitutions:
+  name: frosch-nord
+  friendly_name: Frosch Nord
+  ort: nord
+
+packages:
+  common: !include common.yaml
+
+esp8266:
+  board: nodemcuv2
+
+i2c:
+  sda: GPIO4                  # D2
+  scl: GPIO5                  # D1
+  frequency: 100kHz           # SPS30: max. 100 kHz
+  scan: true
+
+sensor:
+  - platform: bme280_i2c
+    address: 0x76             # SDO → GND
+    update_interval: 60s
+    temperature:
+      name: Temperatur
+      oversampling: 2x
+    pressure:
+      name: Luftdruck
+    humidity:
+      name: Luftfeuchte
+
+  - platform: sps30
+    id: sps30_sensor
+    address: 0x69
+    update_interval: 60s
+    pm_1_0:
+      name: PM1.0
+    pm_2_5:
+      name: PM2.5
+    pm_4_0:
+      name: PM4.0
+    pm_10_0:
+      name: PM10
+    pmc_0_5:
+      name: Partikelanzahl 0.5
+    pmc_2_5:
+      name: Partikelanzahl 2.5
+    pmc_10_0:
+      name: Partikelanzahl 10
+    pm_size:
+      name: Typische Partikelgröße
+
+  # Tageslicht: 3V3 → LDR → A0 → 27 kΩ → GND
+  # Rohwert 0–1023, heller = größer
+  - platform: adc
+    name: Helligkeit
+    pin: A0
+    raw: true
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    update_interval: 2s
+    filters:
+      - sliding_window_moving_average:
+          window_size: 4
+          send_every: 1
+          send_first_at: 1
+
+binary_sensor:
+  - platform: gpio
+    name: Bewegung
+    device_class: motion
+    pin: GPIO14               # D5, HC-SR501-Ausgang (3,3 V)
+
+  - platform: gpio
+    name: Regen
+    device_class: moisture
+    pin:
+      number: GPIO12          # D6, DO der Regenplatine (LOW = nass)
+      inverted: true
+    filters:
+      - delayed_on_off: 1s

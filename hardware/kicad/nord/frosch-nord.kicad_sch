@@ -1,0 +1,1494 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 47fb7c86-ee03-50dd-b88c-a1c4eea1d92e)
+  (paper "A4")
+  (title_block
+    (title "Frosch – Outdoor Norden")
+    (date "2026-10-17")
+    (rev "0.7")
+    (company "Frosch")
+    (comment 1 "ESP8266 NodeMCU V2 · SPS30 · BME280 · LDR · HC-SR501 · Regensensor")
+    (comment 2 "Firmware: software/frosch-nord.yaml")
+    (comment 3 "Verdrahtung: hardware/verdrahtung.md (v0.7)"))
+  (lib_symbols
+    (symbol "frosch:+3V3"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR" (at 0 6.35 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+3V3" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "+3V3_0_1" (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol "+3V3_1_1" (pin power_in line (at 0 0 90) (length 0) hide (name "+3V3" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:+5V"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR" (at 0 6.35 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1" (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol "+5V_1_1" (pin power_in line (at 0 0 90) (length 0) hide (name "+5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:BME280_Modul"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at -6.35 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "BME280" (at -6.35 -16.51 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "BME280-Breakout, I2C (bei 4-poligen Modulen entfallen CSB/SDO)" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "BME280_Modul_0_1" (rectangle (start -6.35 2.54) (end 6.35 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "BME280_Modul_1_1" (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -10.16 0) (length 2.54) (name "CSB" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -12.7 0) (length 2.54) (name "SDO" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:C_Pol"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C" (at 2.54 1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C" (at 2.54 -1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Elektrolytkondensator (Pin 1 = +)" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_Pol_0_1" (rectangle (start -2.286 0.508) (end 2.286 1.016) (stroke (width 0.254) (type default)) (fill (type none))) (rectangle (start 2.286 -0.508) (end -2.286 -1.016) (stroke (width 0.254) (type default)) (fill (type outline))) (polyline (pts (xy -1.778 2.286) (xy -0.762 2.286)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy -1.27 2.794) (xy -1.27 1.778)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 2.54) (xy 0 1.016)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 -1.016) (xy 0 -2.54)) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol "C_Pol_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) hide (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:HC-SR501"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at -6.35 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "HC-SR501" (at -6.35 -8.89 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "PIR-Bewegungsmelder HC-SR501 (Ausgang 3,3 V)" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "HC-SR501_0_1" (rectangle (start -6.35 2.54) (end 6.35 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "HC-SR501_1_1" (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:LDR"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R" (at 2.54 1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LDR" (at 2.54 -1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Fotowiderstand (z. B. GL5528)" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "LDR_0_1" (rectangle (start -1.016 2.54) (end 1.016 -2.54) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy -3.81 2.54) (xy -1.778 0.508)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy -1.778 0.508) (xy -2.54 0.762) (xy -2.032 1.27) (xy -1.778 0.508)) (stroke (width 0) (type default)) (fill (type outline))) (polyline (pts (xy -3.81 0.508) (xy -1.778 -1.524)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy -1.778 -1.524) (xy -2.54 -1.27) (xy -2.032 -0.762) (xy -1.778 -1.524)) (stroke (width 0) (type default)) (fill (type outline))))
+      (symbol "LDR_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:NodeMCU"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at -8.89 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "NodeMCU" (at -8.89 -29.21 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "NodeMCU ESP8266 (logisches Symbol, Pinnummern nicht physisch). D0=GPIO16 D1=GPIO5 D2=GPIO4 D3=GPIO0 D4=GPIO2 D5=GPIO14 D6=GPIO12 D7=GPIO13 D8=GPIO15" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "NodeMCU_0_1" (rectangle (start -8.89 2.54) (end 8.89 -27.94) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "NodeMCU_1_1" (pin power_in line (at -11.43 0 0) (length 2.54) (name "Vin" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -11.43 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin power_out line (at -11.43 -5.08 0) (length 2.54) (name "3V3" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin passive line (at -11.43 -10.16 0) (length 2.54) (name "RST" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin passive line (at -11.43 -12.7 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin passive line (at -11.43 -17.78 0) (length 2.54) (name "A0" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 0 180) (length 2.54) (name "D0" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -2.54 180) (length 2.54) (name "D1" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -5.08 180) (length 2.54) (name "D2" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -7.62 180) (length 2.54) (name "D3" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -10.16 180) (length 2.54) (name "D4" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -12.7 180) (length 2.54) (name "D5" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -15.24 180) (length 2.54) (name "D6" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -17.78 180) (length 2.54) (name "D7" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -20.32 180) (length 2.54) (name "D8" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -22.86 180) (length 2.54) (name "RX" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27))))) (pin passive line (at 11.43 -25.4 180) (length 2.54) (name "TX" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:R"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R" (at 2.54 1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "R" (at 2.54 -1.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Widerstand" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1" (rectangle (start -1.016 2.54) (end 1.016 -2.54) (stroke (width 0.254) (type default)) (fill (type none))))
+      (symbol "R_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:Regen_Modul"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at -6.35 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "Regensensor" (at -6.35 -11.43 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Regenplatine FC-37/YL-83 mit LM393-Komparatormodul" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "Regen_Modul_0_1" (rectangle (start -6.35 2.54) (end 6.35 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "Regen_Modul_1_1" (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "DO" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "AO" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:SPS30"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at -6.35 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "SPS30" (at -6.35 -13.97 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Sensirion SPS30 Feinstaubsensor, Stecker JST ZHR-5; SEL=GND -> I2C" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "SPS30_0_1" (rectangle (start -6.35 2.54) (end 6.35 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "SPS30_1_1" (pin passive line (at -8.89 0 0) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "SEL" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin passive line (at -8.89 -10.16 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))))
+    (symbol "frosch:USB_5V"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J" (at -5.08 3.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+      (property "Value" "USB 5V" (at -5.08 -6.35 0) (effects (font (size 1.27 1.27)) (justify left top)))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "5-V-Einspeisung: USB-Breakout / Schraubklemme vom USB-Steckernetzteil" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "USB_5V_0_1" (rectangle (start -5.08 2.54) (end 5.08 -5.08) (stroke (width 0.254) (type default)) (fill (type background))))
+      (symbol "USB_5V_1_1" (pin power_out line (at 7.62 0 180) (length 2.54) (name "5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_out line (at 7.62 -2.54 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))))))
+  (symbol
+    (lib_id "frosch:USB_5V")
+    (at 30.48 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ef2101c7-9039-532d-904c-856b0db3eca2)
+    (property "Reference" "J1"
+      (at 25.4 36.83 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "USB-Netzteil 5 V (≥1 A) / Klemme"
+      (at 25.4 46.99 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 30.48 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 30.48 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 4a9612ad-3e33-5701-aa5d-8f685c3437c2))
+    (pin "2"
+      (uuid 40d21004-863c-5ac5-960f-5b88680464b9))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "J1") (unit 1)))))
+  (wire
+    (pts
+      (xy 38.1 40.64)
+      (xy 45.72 40.64))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6beb8d51-8b14-54e5-8097-c5deb3ef2165))
+  (symbol
+    (lib_id "frosch:+5V")
+    (at 45.72 40.64 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid af722a4c-0e6c-5a30-88b8-faa69cbc914d)
+    (property "Reference" "#PWR001"
+      (at 45.72 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 52.57 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 45.72 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid cbe15b89-6b29-5cfc-81ae-2855c45b3e77))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR001") (unit 1)))))
+  (wire
+    (pts
+      (xy 38.1 43.18)
+      (xy 45.72 43.18))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9397d784-242c-5c2d-87dd-184d24253d25))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 45.72 43.18 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 010df63f-5683-5e82-80dd-e468d9ea6d48)
+    (property "Reference" "#PWR002"
+      (at 45.72 43.18 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 52.57 43.18 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 43.18 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 45.72 43.18 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 459fe278-3ed6-596a-8665-89b0fb1e1cfe))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR002") (unit 1)))))
+  (symbol
+    (lib_id "frosch:C_Pol")
+    (at 58.42 44.45 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4fb07881-7481-5874-87ab-f25d9885143e)
+    (property "Reference" "C1"
+      (at 60.96 43.18 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "470µF"
+      (at 60.96 45.72 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 58.42 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 58.42 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 700ba3a0-3315-5a31-95d3-c689c87d1937))
+    (pin "2"
+      (uuid 26761152-53ef-5ea6-a51c-7828c673c815))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "C1") (unit 1)))))
+  (wire
+    (pts
+      (xy 58.42 40.64)
+      (xy 58.42 38.1))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 43cb7050-b758-5513-ab13-7db7fb90610e))
+  (symbol
+    (lib_id "frosch:+5V")
+    (at 58.42 38.1 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 8d5a4473-df1d-52e5-b560-89e9e87f9ef2)
+    (property "Reference" "#PWR003"
+      (at 58.42 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 58.42 34.29 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 58.42 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid c2fd2534-0e3e-5dd9-a60f-0dad5c7672c7))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR003") (unit 1)))))
+  (wire
+    (pts
+      (xy 58.42 48.26)
+      (xy 58.42 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 570073f3-aab4-5d01-8b56-2fac80297c98))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 58.42 50.8 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid f52e9c46-2f0d-5814-bf77-f5ab18aa5847)
+    (property "Reference" "#PWR004"
+      (at 58.42 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 58.42 54.61 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 58.42 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 6b98271d-979d-5033-b56b-3dc09de1b2cb))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR004") (unit 1)))))
+  (symbol
+    (lib_id "frosch:NodeMCU")
+    (at 101.6 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fd66493e-5232-5ea7-b276-61a530a86149)
+    (property "Reference" "U1"
+      (at 92.71 46.99 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "NodeMCU V2 (ESP-12E)"
+      (at 92.71 80.01 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 101.6 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 101.6 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid fef9456b-e0ab-5d9a-b1e7-2a937dee00c4))
+    (pin "2"
+      (uuid 3f35e814-ef2d-52bd-a7a6-b65ad08e5751))
+    (pin "3"
+      (uuid 8a6f3dce-ae4a-5b5a-9886-6ff3bfdef770))
+    (pin "4"
+      (uuid c1d17fa4-0791-58eb-9959-b4b2b05ce509))
+    (pin "5"
+      (uuid 28dcaf41-2cbb-59e0-9311-c5524ee6801f))
+    (pin "6"
+      (uuid 62e044c6-caf6-5b76-88e7-c645e9db42e1))
+    (pin "7"
+      (uuid 182edf3c-4f2d-5d62-906a-0e996bf7ec32))
+    (pin "8"
+      (uuid 0392920f-b496-59e8-b4a9-1b90833032c9))
+    (pin "9"
+      (uuid b79516c0-76c4-5629-b492-a7404e8b92d3))
+    (pin "10"
+      (uuid d422c782-9fca-5160-9891-bcab7fb50b29))
+    (pin "11"
+      (uuid 79c5b1e9-cf02-57df-9eb5-c93f672bd48e))
+    (pin "12"
+      (uuid 91f5936f-eabd-5ac4-973c-aedcce7cb5f1))
+    (pin "13"
+      (uuid fedcbc43-6c9b-58cf-bdd6-65e5d6117a4c))
+    (pin "14"
+      (uuid 81569e0a-742b-571a-bfb8-53e280177bdb))
+    (pin "15"
+      (uuid 99411507-b994-5a19-8cc6-bc2af00c50ef))
+    (pin "16"
+      (uuid d3d0aa6e-cadb-57b7-a947-1cda75db3f37))
+    (pin "17"
+      (uuid 8ae15fab-cf76-53bc-b77d-775b13dffdfe))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "U1") (unit 1)))))
+  (wire
+    (pts
+      (xy 90.17 50.8)
+      (xy 82.55 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 38cf9767-2c21-5dc9-8440-40055eaf74fc))
+  (symbol
+    (lib_id "frosch:+5V")
+    (at 82.55 50.8 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 9231e301-4a39-551d-a60f-7bd4539571ef)
+    (property "Reference" "#PWR005"
+      (at 82.55 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 75.7 50.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 82.55 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 82.55 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid b75744c4-8845-5a1b-99d4-ad76f4c61c97))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR005") (unit 1)))))
+  (wire
+    (pts
+      (xy 90.17 53.34)
+      (xy 82.55 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b49d7a29-8728-5b5b-a8b9-a8533ef8e5f9))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 82.55 53.34 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 77ee2310-170f-5212-b5bc-219cedb85655)
+    (property "Reference" "#PWR006"
+      (at 82.55 53.34 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 75.7 53.34 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 82.55 53.34 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 82.55 53.34 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 7f46c71e-d2b3-5a0e-af42-b56b1a78f6ca))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR006") (unit 1)))))
+  (wire
+    (pts
+      (xy 90.17 55.88)
+      (xy 82.55 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 89c11ba5-0f7f-59ec-8007-0e2b05772e94))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 82.55 55.88 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 701bc2c4-0eef-56d1-893b-848c766fe473)
+    (property "Reference" "#PWR007"
+      (at 82.55 55.88 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 74.85 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 82.55 55.88 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 82.55 55.88 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 1babcf39-fa6e-53bf-8d38-2c2160692ea3))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR007") (unit 1)))))
+  (no_connect
+    (at 90.17 60.96)
+    (uuid 4a2fe2a9-cd09-5b24-87f2-0fe05c56e575))
+  (no_connect
+    (at 90.17 63.5)
+    (uuid 831eb398-38a4-5a4f-ba91-abe7c5ec4a83))
+  (wire
+    (pts
+      (xy 90.17 68.58)
+      (xy 85.09 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f4bdabb7-6422-5ebb-8a09-a85824d6f180))
+  (global_label "LDR_OUT"
+    (shape input)
+    (at 85.09 68.58 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 265ea615-f00c-527e-85ac-f6759336636a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 85.09 68.58 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 113.03 53.34)
+      (xy 118.11 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid efaccdbb-2ac3-5ca8-8eea-f825b467f975))
+  (global_label "SCL"
+    (shape output)
+    (at 118.11 53.34 0)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify left))
+    (uuid b06b6e9a-ca96-5432-9fe6-0a15f1114ba4)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 118.11 53.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)))
+  (wire
+    (pts
+      (xy 113.03 55.88)
+      (xy 118.11 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9650c80f-b4f2-50af-a710-53561315fd93))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 118.11 55.88 0)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify left))
+    (uuid 78039720-0a44-51c7-9d01-5177b529b0ff)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 118.11 55.88 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)))
+  (wire
+    (pts
+      (xy 113.03 63.5)
+      (xy 118.11 63.5))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bae57e36-9dbd-599b-a3c2-e06646aa7b9c))
+  (global_label "PIR"
+    (shape input)
+    (at 118.11 63.5 0)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify left))
+    (uuid 02aefdbd-9a4e-5c2a-9139-49b17d6893a5)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 118.11 63.5 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)))
+  (wire
+    (pts
+      (xy 113.03 66.04)
+      (xy 118.11 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 51bf76a3-5d97-5c09-b1b3-feb78bc37461))
+  (global_label "REGEN"
+    (shape input)
+    (at 118.11 66.04 0)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify left))
+    (uuid 7937dc30-d219-5251-88d9-a93035433a68)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 118.11 66.04 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)))
+  (no_connect
+    (at 113.03 50.8)
+    (uuid a7b87c24-95b9-59d7-92b1-707b24eeb4bc))
+  (no_connect
+    (at 113.03 58.42)
+    (uuid 7404cf32-08e6-50c5-ad74-b6f3ea7cf7ee))
+  (no_connect
+    (at 113.03 60.96)
+    (uuid 4d6b1907-cb16-519c-9056-dbfe9d98b5fd))
+  (no_connect
+    (at 113.03 68.58)
+    (uuid 6cfda6d0-51b0-5f0b-a0dd-6a3c2259cd5b))
+  (no_connect
+    (at 113.03 71.12)
+    (uuid 6bc9c436-31a4-5039-84b4-3bccfede19ec))
+  (no_connect
+    (at 113.03 73.66)
+    (uuid 816eb358-062e-575d-b269-b2c13ec51cbe))
+  (no_connect
+    (at 113.03 76.2)
+    (uuid 11436a53-3d96-5ebd-889c-92eeeb4c2a28))
+  (symbol
+    (lib_id "frosch:SPS30")
+    (at 172.72 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3b209d64-69db-5d49-8a45-c4f2d20f0f32)
+    (property "Reference" "U2"
+      (at 166.37 36.83 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "SPS30 (0x69)"
+      (at 166.37 54.61 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 172.72 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 172.72 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 8898d6fb-b4ae-51db-b151-0edacd5afb08))
+    (pin "2"
+      (uuid 71e5ea2f-7a34-52d5-92f6-aa4f07fa9fec))
+    (pin "3"
+      (uuid b62038fa-4ed0-5e81-9180-8f6e8f7b5e32))
+    (pin "4"
+      (uuid 18825e82-5a50-5b9f-9001-8c8c6f6748c4))
+    (pin "5"
+      (uuid 14f0c718-c178-5aa6-bb70-1a7ee8a70ddb))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "U2") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 40.64)
+      (xy 156.21 40.64))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6ca9d84b-b3ff-5528-86eb-0a08a937b912))
+  (symbol
+    (lib_id "frosch:+5V")
+    (at 156.21 40.64 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid ffce7c53-995a-53ce-a015-89677915b1c0)
+    (property "Reference" "#PWR008"
+      (at 156.21 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 149.36 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 40.64 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid cea42ed1-2f1e-580e-aae5-7f7605c2e0ab))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR008") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 43.18)
+      (xy 158.75 43.18))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b4458a63-e8f6-5e66-b927-21f6aee6310f))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 158.75 43.18 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid dc107233-d40f-59ce-aa2d-a77b010c3577)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 43.18 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 163.83 45.72)
+      (xy 158.75 45.72))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid fa688d93-4cfc-57d4-b136-672d71be680c))
+  (global_label "SCL"
+    (shape input)
+    (at 158.75 45.72 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 1394f706-acd8-515e-afd3-05fd6c63e655)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 45.72 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 163.83 48.26)
+      (xy 156.21 48.26))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 40498c33-0055-5d2d-8af5-aa5a7e1c6c73))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 48.26 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 5db1c0fd-7a16-5c49-be80-7a4baa67443b)
+    (property "Reference" "#PWR009"
+      (at 156.21 48.26 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 48.26 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 48.26 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 598f53e2-3cea-581f-bbe1-2c3b74a25bf4))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR009") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 50.8)
+      (xy 156.21 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b5dd0898-730f-5fc3-bf42-bd7bcc54231e))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 50.8 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 12c9fe61-ab13-570a-8893-42cba5fa1979)
+    (property "Reference" "#PWR010"
+      (at 156.21 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 50.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 50.8 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 855063f0-2aea-56c0-9d7f-fb49f4c3a065))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR010") (unit 1)))))
+  (symbol
+    (lib_id "frosch:BME280_Modul")
+    (at 172.72 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b3c59566-0702-5ffc-86e7-a75e9604657e)
+    (property "Reference" "U3"
+      (at 166.37 72.39 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "BME280 (0x76)"
+      (at 166.37 92.71 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 172.72 76.2 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 172.72 76.2 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 05b4a3c2-3aa3-5f04-abbb-016f00ca79d8))
+    (pin "2"
+      (uuid f9e4ce76-e328-54cc-912e-dadb7a7f92f3))
+    (pin "3"
+      (uuid 7c207f44-4b6e-58d6-8928-4c157f34a4a6))
+    (pin "4"
+      (uuid f7679bc2-35be-5890-8258-e1048f8714b8))
+    (pin "5"
+      (uuid 84579280-7877-50a4-a11a-f56993dc0bd2))
+    (pin "6"
+      (uuid 4a66e9d3-185d-53f8-905b-ab11f893cf6e))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "U3") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 76.2)
+      (xy 156.21 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c76ee71b-c97e-52f1-9ed3-6ffc61250cc3))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 156.21 76.2 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid e10e42e3-058f-5628-ba25-dcbec8e38748)
+    (property "Reference" "#PWR011"
+      (at 156.21 76.2 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 148.51 76.2 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 76.2 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 76.2 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 98d3c05d-0101-5104-8020-9a8ae61efd04))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR011") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 78.74)
+      (xy 156.21 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid aa867596-4f87-5297-83dd-26561f7f07e3))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 78.74 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 37828cc9-841e-50ca-b685-4356d98b4969)
+    (property "Reference" "#PWR012"
+      (at 156.21 78.74 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 78.74 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 78.74 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 78.74 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 0c05e1f6-3440-5f8d-ad62-8121e0c27bbe))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR012") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 81.28)
+      (xy 158.75 81.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1ddd7010-f9cb-5218-94a2-a4be3a02fb62))
+  (global_label "SCL"
+    (shape input)
+    (at 158.75 81.28 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid e1eabf47-c633-5366-a67b-16a2426ff68d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 81.28 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 163.83 83.82)
+      (xy 158.75 83.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6e7aa1df-5023-529d-af57-1c9e20807c68))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 158.75 83.82 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 79744095-628a-5825-8837-e34cb050bd84)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 83.82 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 163.83 86.36)
+      (xy 156.21 86.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 489f70ed-8824-534c-a602-6a463020ae39))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 156.21 86.36 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 46962129-092f-5144-a261-beff923284db)
+    (property "Reference" "#PWR013"
+      (at 156.21 86.36 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 148.51 86.36 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 86.36 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 86.36 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid a150a948-79f7-5dc9-b0b5-331c58fc4771))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR013") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 88.9)
+      (xy 156.21 88.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid fffca1ed-0e02-5db6-b9e6-c8e8960cad79))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 88.9 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 3fa47a51-cc32-5746-b04e-0ed286ab6d15)
+    (property "Reference" "#PWR014"
+      (at 156.21 88.9 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 88.9 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 88.9 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 88.9 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 15175869-caff-5228-812c-d76467c70d6b))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR014") (unit 1)))))
+  (symbol
+    (lib_id "frosch:R")
+    (at 236.22 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp yes)
+    (uuid 430ef077-e085-515e-acda-76cfe1ab4621)
+    (property "Reference" "R3"
+      (at 238.76 39.37 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "4k7 (nur falls BME280 ohne Pull-ups)"
+      (at 238.76 41.91 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 236.22 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 2cab4184-cc05-5b9b-8a74-4aced568716f))
+    (pin "2"
+      (uuid 4570e6ee-b060-50a7-a636-83f2ae21449c))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "R3") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 36.83)
+      (xy 236.22 34.29))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e61cc0c8-7302-5737-bd67-caa45b02afd6))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 236.22 34.29 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 1140c362-0c2a-5c96-8d35-571840168efd)
+    (property "Reference" "#PWR015"
+      (at 236.22 34.29 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 236.22 30.48 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 236.22 34.29 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 34.29 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid a199a9f4-9a70-5b26-9a6c-5828c2cfe889))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR015") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 44.45)
+      (xy 236.22 46.99))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 238e0410-770f-5f15-af7b-4fefb78d2894))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 236.22 46.99 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 39a06ad1-de5b-57da-b02f-40a6b89e22e6)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 236.22 46.99 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (symbol
+    (lib_id "frosch:R")
+    (at 236.22 63.5 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp yes)
+    (uuid 9c8188f4-33f8-5a35-b2d4-2dcdad8f5917)
+    (property "Reference" "R4"
+      (at 238.76 62.23 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "4k7 (nur falls BME280 ohne Pull-ups)"
+      (at 238.76 64.77 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 236.22 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 09d4c516-8cb5-5fad-918c-63734a8f39fe))
+    (pin "2"
+      (uuid 65b5d894-a3ff-582e-8cfe-e4469c2b12d7))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "R4") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 59.69)
+      (xy 236.22 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0bdf587f-f318-55c3-ada0-44831bd258aa))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 236.22 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid c6a6536a-36d2-5c47-a1d5-85b1858348ad)
+    (property "Reference" "#PWR016"
+      (at 236.22 57.15 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 236.22 53.34 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 236.22 57.15 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 57.15 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid ee17a05c-e49a-55f8-83b0-bb6adbececc4))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR016") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 67.31)
+      (xy 236.22 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c06cacec-ea6a-5f55-96ec-7350f3827b76))
+  (global_label "SCL"
+    (shape passive)
+    (at 236.22 69.85 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 5c5f619b-0d99-5766-917b-1eac733c81ef)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 236.22 69.85 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (symbol
+    (lib_id "frosch:HC-SR501")
+    (at 172.72 116.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 76b9dfa3-8965-50b0-abcf-1c6cd2ae2c21)
+    (property "Reference" "U4"
+      (at 166.37 113.03 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "HC-SR501"
+      (at 166.37 125.73 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 172.72 116.84 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 172.72 116.84 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid a53ac794-c06c-5f6f-826d-15196382388f))
+    (pin "2"
+      (uuid 5fd162f7-6fae-5219-92f9-d0f7ad82906f))
+    (pin "3"
+      (uuid 14ae2778-0cfc-5473-a2c6-8dbceb7cfe03))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "U4") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 116.84)
+      (xy 156.21 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2a4f2933-44ee-5b6b-a013-1db8087905f1))
+  (symbol
+    (lib_id "frosch:+5V")
+    (at 156.21 116.84 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 26ed2675-b800-5b67-b61f-619450208808)
+    (property "Reference" "#PWR017"
+      (at 156.21 116.84 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 149.36 116.84 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 116.84 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 116.84 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 77765367-7218-5649-8e8d-e5b9d0032d75))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR017") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 119.38)
+      (xy 158.75 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 809abecd-bcac-5e5f-add6-e673d1a30ba8))
+  (global_label "PIR"
+    (shape output)
+    (at 158.75 119.38 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 459aeb40-db23-527f-a6c0-6f16697e78b4)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 119.38 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 163.83 121.92)
+      (xy 156.21 121.92))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1f5a4b6d-8917-5889-b26b-0942a99f6f56))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 121.92 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 0c5eeb18-ce5f-50f2-8fd0-91eb0116a01b)
+    (property "Reference" "#PWR018"
+      (at 156.21 121.92 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 121.92 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 121.92 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 121.92 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 0b7cdc46-b2ce-53fd-b28a-4ef0459b1a84))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR018") (unit 1)))))
+  (symbol
+    (lib_id "frosch:Regen_Modul")
+    (at 172.72 142.24 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4e8d6778-b312-5c56-82f4-a819072e8b3f)
+    (property "Reference" "U5"
+      (at 166.37 138.43 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "Regensensor LM393"
+      (at 166.37 153.67 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 172.72 142.24 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 172.72 142.24 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 9a21a7a5-d700-5abe-a984-f4fcce68c27f))
+    (pin "2"
+      (uuid f313f99f-29c6-5c6f-96bd-f857fc88a334))
+    (pin "3"
+      (uuid ce4bdd7c-7c3b-55c3-8846-85fb059f5700))
+    (pin "4"
+      (uuid 0a632886-897f-5179-8286-93edfa7eef39))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "U5") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 142.24)
+      (xy 156.21 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d6e8d7d6-e0bc-5fcb-8f7a-e9d750294d39))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 156.21 142.24 90)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 8e72836b-de8c-567d-9061-4beaa750b8f1)
+    (property "Reference" "#PWR019"
+      (at 156.21 142.24 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 148.51 142.24 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 142.24 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 142.24 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 34f42f52-dcb0-55e4-8b4b-9880cd04e65c))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR019") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 144.78)
+      (xy 156.21 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 18373a67-7199-5b59-9aaa-a631e8d03e28))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 156.21 144.78 270)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid b12d113b-613a-5e68-a117-22636e1d66a8)
+    (property "Reference" "#PWR020"
+      (at 156.21 144.78 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 149.36 144.78 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 156.21 144.78 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 156.21 144.78 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 3e8a9f34-d40b-5070-a890-0bb633c67921))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR020") (unit 1)))))
+  (wire
+    (pts
+      (xy 163.83 147.32)
+      (xy 158.75 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a7321609-6af7-5c62-82fc-e79056504a51))
+  (global_label "REGEN"
+    (shape output)
+    (at 158.75 147.32 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 5b6db2dc-5c7a-5369-b9ea-a24b2cf6a08e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 147.32 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (no_connect
+    (at 163.83 149.86)
+    (uuid 771bfb27-5876-5424-827c-aa4022578928))
+  (symbol
+    (lib_id "frosch:LDR")
+    (at 236.22 106.68 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7387b909-6f18-51a8-86ae-156872d7707c)
+    (property "Reference" "R1"
+      (at 238.76 105.41 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LDR GL5528"
+      (at 238.76 107.95 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 236.22 106.68 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 106.68 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid a7fc8435-6955-5305-8f76-9d5ea97c6788))
+    (pin "2"
+      (uuid 1f42ae4d-e336-5978-91f6-a363d9534ce4))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "R1") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 102.87)
+      (xy 236.22 100.33))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2a15e522-b4b2-5506-b434-74d943d8b400))
+  (symbol
+    (lib_id "frosch:+3V3")
+    (at 236.22 100.33 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid a3e45cbc-7d66-5b0d-8a36-a64e4f7f0da2)
+    (property "Reference" "#PWR021"
+      (at 236.22 100.33 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 236.22 96.52 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 236.22 100.33 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 100.33 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 3f8e2839-e5ef-5b6a-89ff-5ddae1be383e))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR021") (unit 1)))))
+  (symbol
+    (lib_id "frosch:R")
+    (at 236.22 119.38 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 54459b99-1925-56e4-a95b-03b96e909a62)
+    (property "Reference" "R2"
+      (at 238.76 118.11 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "27k"
+      (at 238.76 120.65 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 236.22 119.38 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 119.38 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid cc9c8874-56d1-570d-a1f1-6bd3f9ab6810))
+    (pin "2"
+      (uuid db6645df-834f-5599-b2ea-59814616f41f))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "R2") (unit 1)))))
+  (wire
+    (pts
+      (xy 236.22 110.49)
+      (xy 236.22 115.57))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 254ec55d-354e-5d37-afc6-3f58650200fc))
+  (global_label "LDR_OUT"
+    (shape output)
+    (at 236.22 113.03 180)
+    (fields_autoplaced)
+    (effects
+      (font (size 1.27 1.27))
+      (justify right))
+    (uuid 2883c5f2-959d-5399-a7de-4b62332a559e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 236.22 113.03 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)))
+  (wire
+    (pts
+      (xy 236.22 123.19)
+      (xy 236.22 125.73))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 16917ebf-154b-5688-a98e-6304b38e60c7))
+  (symbol
+    (lib_id "frosch:GND")
+    (at 236.22 125.73 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 0ca67076-2f1e-5035-a573-c70f22184c2b)
+    (property "Reference" "#PWR022"
+      (at 236.22 125.73 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 236.22 129.54 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 236.22 125.73 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 236.22 125.73 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid e504a205-b1dd-5db1-b8c7-8de739d9c78b))
+    (instances
+      (project "frosch-nord" (path "/47fb7c86-ee03-50dd-b88c-a1c4eea1d92e" (reference "#PWR022") (unit 1)))))
+  (text "Hinweise\n• 5 V sternförmig von J1 an NodeMCU Vin, SPS30 VDD und HC-SR501; beim Flashen per USB Netzteil abziehen.\n• SPS30: Spannung direkt am Sensor (Pin1↔Pin5) unter Last ≥ 4,5 V – nicht über die Schottky-Diode des NodeMCU abgreifen.\n• I2C: SPS30 0x69, BME280 0x76 (SDO→GND, CSB→3V3). Pull-ups nur nach 3V3, nie nach 5 V.\n• R3/R4 (DNP) nur bestücken, wenn das BME280-Breakout keine Pull-ups hat.\n• HC-SR501: Jumper H, Zeit-Poti 5–30 s. Regenplatine: Schwelle am Poti, LOW = nass.\n• Frei: D7 (z. B. Windsensor mit pulse_counter), D0."
+    (at 30.48 175.26 0)
+    (effects
+      (font (size 1.27 1.27))
+      (justify left top))
+    (uuid a379ed63-01ba-53df-9b33-b17a58e2978d))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

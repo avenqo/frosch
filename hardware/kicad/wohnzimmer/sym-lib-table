@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "frosch")(type "KiCad")(uri "${KIPRJMOD}/../frosch.kicad_sym")(options "")(descr "Frosch Sensor-Module"))
+)

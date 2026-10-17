@@ -1,0 +1,424 @@
+(kicad_symbol_lib
+  (version 20220914)
+  (generator kicad_symbol_editor)
+  (symbol "+3V3"
+    (power)
+    (pin_names
+      (offset 0))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "#PWR"
+      (at 0 6.35 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3"
+      (at 0 3.556 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "+3V3_0_1"
+      (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none))))
+    (symbol "+3V3_1_1"
+      (pin power_in line (at 0 0 90) (length 0) hide (name "+3V3" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+  (symbol "+5V"
+    (power)
+    (pin_names
+      (offset 0))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "#PWR"
+      (at 0 6.35 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 0 3.556 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "+5V_0_1"
+      (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none))))
+    (symbol "+5V_1_1"
+      (pin power_in line (at 0 0 90) (length 0) hide (name "+5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+  (symbol "ADS1115_Modul"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -7.62 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "ADS1115"
+      (at -7.62 -16.51 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "ADS1115-Breakout, 16-bit ADC, I2C"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "ADS1115_Modul_0_1"
+      (rectangle (start -7.62 2.54) (end 7.62 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "ADS1115_Modul_1_1"
+      (pin passive line (at -10.16 0 0) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -10.16 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -10.16 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -10.16 -7.62 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -10.16 -10.16 0) (length 2.54) (name "ADDR" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -10.16 -12.7 0) (length 2.54) (name "ALRT" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 10.16 0 180) (length 2.54) (name "A0" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 10.16 -2.54 180) (length 2.54) (name "A1" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 10.16 -5.08 180) (length 2.54) (name "A2" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 10.16 -7.62 180) (length 2.54) (name "A3" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))))
+  (symbol "BME280_Modul"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "BME280"
+      (at -6.35 -16.51 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "BME280-Breakout, I2C (bei 4-poligen Modulen entfallen CSB/SDO)"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "BME280_Modul_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "BME280_Modul_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -10.16 0) (length 2.54) (name "CSB" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -12.7 0) (length 2.54) (name "SDO" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))))
+  (symbol "BMP280_Modul"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "BMP280"
+      (at -6.35 -16.51 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "BMP280-Breakout (GY-BMP280), I2C"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "BMP280_Modul_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "BMP280_Modul_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -10.16 0) (length 2.54) (name "CSB" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -12.7 0) (length 2.54) (name "SDO" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))))
+  (symbol "C_Pol"
+    (pin_numbers hide)
+    (pin_names
+      (offset 0) hide)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 2.54 1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "C"
+      (at 2.54 -1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Elektrolytkondensator (Pin 1 = +)"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "C_Pol_0_1"
+      (rectangle (start -2.286 0.508) (end 2.286 1.016) (stroke (width 0.254) (type default)) (fill (type none)))
+      (rectangle (start 2.286 -0.508) (end -2.286 -1.016) (stroke (width 0.254) (type default)) (fill (type outline)))
+      (polyline (pts (xy -1.778 2.286) (xy -0.762 2.286)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy -1.27 2.794) (xy -1.27 1.778)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 2.54) (xy 0 1.016)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 -1.016) (xy 0 -2.54)) (stroke (width 0) (type default)) (fill (type none))))
+    (symbol "C_Pol_1_1"
+      (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+  (symbol "GND"
+    (power)
+    (pin_names
+      (offset 0))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "#PWR"
+      (at 0 -6.35 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 0 -3.81 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "GND_0_1"
+      (polyline (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none))))
+    (symbol "GND_1_1"
+      (pin power_in line (at 0 0 270) (length 0) hide (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+  (symbol "HC-SR501"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "HC-SR501"
+      (at -6.35 -8.89 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "PIR-Bewegungsmelder HC-SR501 (Ausgang 3,3 V)"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "HC-SR501_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "HC-SR501_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))
+  (symbol "LDR"
+    (pin_numbers hide)
+    (pin_names
+      (offset 0) hide)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 2.54 1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LDR"
+      (at 2.54 -1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Fotowiderstand (z. B. GL5528)"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "LDR_0_1"
+      (rectangle (start -1.016 2.54) (end 1.016 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy -3.81 2.54) (xy -1.778 0.508)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy -1.778 0.508) (xy -2.54 0.762) (xy -2.032 1.27) (xy -1.778 0.508)) (stroke (width 0) (type default)) (fill (type outline)))
+      (polyline (pts (xy -3.81 0.508) (xy -1.778 -1.524)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy -1.778 -1.524) (xy -2.54 -1.27) (xy -2.032 -0.762) (xy -1.778 -1.524)) (stroke (width 0) (type default)) (fill (type outline))))
+    (symbol "LDR_1_1"
+      (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+  (symbol "MQ2_Modul"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "MQ-2"
+      (at -6.35 -11.43 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "MQ-2 Gassensor-Modul (Heizung 5 V, ca. 150 mA)"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "MQ2_Modul_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "MQ2_Modul_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "DO" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "AO" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+  (symbol "NodeMCU"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -8.89 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "NodeMCU"
+      (at -8.89 -29.21 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "NodeMCU ESP8266 (logisches Symbol, Pinnummern nicht physisch). D0=GPIO16 D1=GPIO5 D2=GPIO4 D3=GPIO0 D4=GPIO2 D5=GPIO14 D6=GPIO12 D7=GPIO13 D8=GPIO15"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "NodeMCU_0_1"
+      (rectangle (start -8.89 2.54) (end 8.89 -27.94) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "NodeMCU_1_1"
+      (pin power_in line (at -11.43 0 0) (length 2.54) (name "Vin" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -11.43 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin power_out line (at -11.43 -5.08 0) (length 2.54) (name "3V3" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -11.43 -10.16 0) (length 2.54) (name "RST" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -11.43 -12.7 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -11.43 -17.78 0) (length 2.54) (name "A0" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 0 180) (length 2.54) (name "D0" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -2.54 180) (length 2.54) (name "D1" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -5.08 180) (length 2.54) (name "D2" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -7.62 180) (length 2.54) (name "D3" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -10.16 180) (length 2.54) (name "D4" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -12.7 180) (length 2.54) (name "D5" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -15.24 180) (length 2.54) (name "D6" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -17.78 180) (length 2.54) (name "D7" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -20.32 180) (length 2.54) (name "D8" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -22.86 180) (length 2.54) (name "RX" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 11.43 -25.4 180) (length 2.54) (name "TX" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))))
+  (symbol "R"
+    (pin_numbers hide)
+    (pin_names
+      (offset 0) hide)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 2.54 1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R"
+      (at 2.54 -1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Widerstand"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "R_0_1"
+      (rectangle (start -1.016 2.54) (end 1.016 -2.54) (stroke (width 0.254) (type default)) (fill (type none))))
+    (symbol "R_1_1"
+      (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+  (symbol "Regen_Modul"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "Regensensor"
+      (at -6.35 -11.43 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Regenplatine FC-37/YL-83 mit LM393-Komparatormodul"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "Regen_Modul_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "Regen_Modul_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "DO" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "AO" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+  (symbol "SPS30"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at -6.35 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "SPS30"
+      (at -6.35 -13.97 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Sensirion SPS30 Feinstaubsensor, Stecker JST ZHR-5; SEL=GND -> I2C"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "SPS30_0_1"
+      (rectangle (start -6.35 2.54) (end 6.35 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "SPS30_1_1"
+      (pin passive line (at -8.89 0 0) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -2.54 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -5.08 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -7.62 0) (length 2.54) (name "SEL" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -8.89 -10.16 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))))
+  (symbol "USB_5V"
+    (pin_names
+      (offset 1.016))
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "J"
+      (at -5.08 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Value" "USB 5V"
+      (at -5.08 -6.35 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "5-V-Einspeisung: USB-Breakout / Schraubklemme vom USB-Steckernetzteil"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (symbol "USB_5V_0_1"
+      (rectangle (start -5.08 2.54) (end 5.08 -5.08) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "USB_5V_1_1"
+      (pin power_out line (at 7.62 0 180) (length 2.54) (name "5V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin power_out line (at 7.62 -2.54 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))))))
