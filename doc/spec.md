@@ -21,6 +21,7 @@ Gehäuse für Outdoor werden entworfen und gedruckt (PETG).
  - ADS1115 und daran angeschlossen
  	- Fotowiderstand an für Helligkeit
  	- MQ2 Sensor
+ - IR Motion Detector HC-SR501
  
 #### Outdoor: Norden
  

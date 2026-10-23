@@ -1,5 +1,5 @@
 # Frosch – Indoor: Wohnzimmer
-# ESP8266 NodeMCU V0.9 · BMP280 + ADS1115 (beide I2C) · Fotowiderstand und MQ-2 am ADS1115
+# ESP8266 NodeMCU V0.9 · BMP280 + ADS1115 (beide I2C) · Fotowiderstand und MQ-2 am ADS1115 · PIR HC-SR501
 # Verdrahtung: ../hardware/verdrahtung.md, Abschnitt "Wohnzimmer"
 
 substitutions:
@@ -55,5 +55,12 @@ sensor:
     update_interval: 10s
     filters:
       - multiply: 1.5
+
+binary_sensor:
+  - platform: gpio
+    name: Bewegung
+    device_class: motion
+    pin: GPIO14               # D5, HC-SR501-Ausgang (3,3 V)
+
 logger:
   level: WARN

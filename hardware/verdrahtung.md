@@ -1,6 +1,6 @@
-# Frosch – Verdrahtung v0.7
+# Frosch – Verdrahtung v0.8
 
-Grundlage: `doc/spec.md` (Stand 14.10.2026, 17:01). Frosch besteht aus mehreren Sensorknoten im selben WLAN, jeder mit eigener ESPHome-Konfiguration.
+Grundlage: `doc/spec.md` (Stand 18.10.2026). Frosch besteht aus mehreren Sensorknoten im selben WLAN, jeder mit eigener ESPHome-Konfiguration.
 
 | Knoten | Board | Firmware | MQTT-Präfix |
 |---|---|---|---|
@@ -11,8 +11,8 @@ WLAN, MQTT und OTA stehen für alle Knoten gemeinsam in `software/common.yaml`.
 
 **Schaltpläne (KiCad 7, öffnen auch mit KiCad 8/9):** `hardware/kicad/wohnzimmer/frosch-wohnzimmer.kicad_pro` und `hardware/kicad/nord/frosch-nord.kicad_pro`, gemeinsame Symbolbibliothek `hardware/kicad/frosch.kicad_sym`. Jeweils mit PDF-Export daneben.
 
-**Änderungen gegenüber v0.6**
-- Norden: BME280 (I2C, Temperatur/Feuchte/Druck) statt AM2302. D7 ist dadurch frei.
+**Änderungen gegenüber v0.7**
+- Wohnzimmer: PIR-Bewegungsmelder HC-SR501 an D5.
 
 ## Versorgung (beide Knoten)
 
@@ -45,11 +45,12 @@ Der NodeMCU V0.9 hat dieselbe Pin-Zuordnung (D0–D8 ↔ GPIO) wie V2. Er ist ab
 |---|---|---|
 | D1 | 5 | I2C SCL → BMP280, ADS1115 |
 | D2 | 4 | I2C SDA → BMP280, ADS1115 |
+| D5 | 14 | HC-SR501 OUT |
 | 3V3 | – | BMP280, ADS1115 VDD, LDR |
 | Vin | – | 5 V von der Klemme |
 | GND | – | Stern-GND |
 
-- **Frei:** D0 (16), D5 (14), D6 (12), D7 (13) und A0. Die Pins D3, D4 und D8 sind Boot-Strap-Pins und nur eingeschränkt nutzbar.
+- **Frei:** D0 (16), D6 (12), D7 (13) und A0. Die Pins D3, D4 und D8 sind Boot-Strap-Pins und nur eingeschränkt nutzbar.
 
 ### I2C-Bus (D1/D2, 100 kHz)
 
@@ -103,6 +104,13 @@ MQ-2 AO ── 10 kΩ ──┬── A1 (ADS1115)
 - **DO:** bleibt frei.
 - **Einbrennen:** Neue Sensoren 24–48 h einbrennen lassen. Nach jedem Einschalten einige Minuten Aufwärmzeit abwarten.
 - **Abstand halten:** Die Heizung erwärmt die Umgebung. Den MQ-2 nicht direkt neben den BMP280 setzen.
+
+### HC-SR501 (PIR)
+- **Anschluss:** VCC an 5 V (Klemme), GND an GND, OUT an D5. Der Ausgang liefert 3,3 V.
+- **Jumper:** auf H (retriggerbar).
+- **Zeit-Poti:** 5–30 s.
+- **Abstand zum MQ-2:** Die Heizung des MQ-2 ist eine Wärmequelle. Den PIR nicht direkt daneben setzen und nicht auf Heizkörper oder Fenster mit Sonne ausrichten, sonst gibt es Fehlauslösungen.
+- **Einschwingzeit:** Nach dem Einschalten ca. 1 min mit möglichen Fehlauslösungen.
 
 ## Outdoor: Norden (ESP8266 NodeMCU V2)
 
@@ -169,5 +177,5 @@ Die Firmware liefert den Rohwert 0–1023, heller = größer. Das NodeMCU hat an
 
 | Knoten | Teile |
 |---|---|
-| Wohnzimmer | NodeMCU V0.9, BMP280-Breakout, ADS1115-Modul, LDR (GL5528) + 27 kΩ, MQ-2-Modul, 10 kΩ + 20 kΩ (Teiler MQ-2), USB-Breakout/Klemme, Elko 100–470 µF, USB-Netzteil ≥ 1 A |
+| Wohnzimmer | NodeMCU V0.9, BMP280-Breakout, ADS1115-Modul, HC-SR501, LDR (GL5528) + 27 kΩ, MQ-2-Modul, 10 kΩ + 20 kΩ (Teiler MQ-2), USB-Breakout/Klemme, Elko 100–470 µF, USB-Netzteil ≥ 1 A |
 | Norden | NodeMCU V2, SPS30 + JST-ZHR-5-Kabel, BME280-Breakout, ggf. 2× 4,7 kΩ (I2C-Pull-ups), LDR + 27 kΩ, HC-SR501, Regenplatine + LM393-Modul, USB-Breakout/Klemme, Elko 100–470 µF, USB-Netzteil ≥ 1 A, Außenkabel |
